@@ -1,0 +1,21 @@
+@mixin flexProperty($x-alignment: center, $y-alignment: center, $direction: row) {
+  display: flex;
+  justify-content: $x-alignment;
+  align-items: $y-alignment;
+  flex-direction: $direction;
+}
+
+
+@mixin gridProperty($column, $row, $gap) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+  gap: $gap;
+}
+
+
+@mixin media-lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
